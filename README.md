@@ -6,6 +6,12 @@ A C++ game similar to the game Zombies vs Plants with limited options.
 * Walnuts are pretty resistent when the zombies reach them while the others are easily eaten!
 * There is only one regular type of zombie.
 
+## How it looks
+
+![Alt text](Image_Assets/ZombiesVsPlants.gif?raw=true "Optional Title")
+
+![Alt text](Image_Assets/GameScreenshot.png?raw=true "Optional Title")
+
 ## Requirements
 The two files rsdl.h and rsdl.cpp define the UI library used in this game. They use the SDL2 library to offer similar options such as displaying photos, drawing lines, and etc.
 Therefore, you need to have the SDL library in your system. 
