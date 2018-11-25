@@ -1,5 +1,5 @@
 # ZombiesVsPlants
-A C++ game similar to the game Zombies vs Plants with limited options.
+A C++ game similar to the game Zombies vs Plants with limited options. This game was developed as an Advanced Programing (taught by [Dr Khosravi](http://ece.ut.ac.ir/en/~r.khosravi))) project during the 2017 semester at the University of Tehran.
 
 * Zombies are trying to pass accross yout backyard and enter the house (in order to eat your brain, I might add :))). The player can use plants to prevent that from happening.
 * There are three types of plants: peashooter, sunflower, and walnut.
