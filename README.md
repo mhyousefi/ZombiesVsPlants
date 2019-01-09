@@ -13,7 +13,7 @@ A C++ game similar to the game Zombies vs Plants with limited options. This game
 ![Alt text](Image_Assets/GameScreenshot.png?raw=true "Optional Title")
 
 ## Requirements
-The two files rsdl.h and rsdl.cpp define the UI library used in this game. They use the SDL2 library to offer similar options such as displaying photos, drawing lines, and etc.
+The two files rsdl.h and rsdl.cpp (A repo for this can be found [here](https://github.com/UTAP/RSDL)) define the UI library used in this game. They use the SDL2 library to offer similar options such as displaying photos, drawing lines, and etc.
 Therefore, you need to have the SDL library in your system. 
 
 The /SDL2_Frameworks_Mac directory contains necassary files and info on adding the SDL library on MacOS.
