@@ -31,7 +31,7 @@ For MacOS:
     $ ./ZombiesVsPlants
 For Linux:
 
-    $ g++ -o ZombiesVsPlants ZombiesVsPlants.cpp rsdl.cpp -l SDL2 -l SLD2_image -l SDL2_ttf
+    $ g++ -o ZombiesVsPlants ZombiesVsPlants.cpp rsdl.cpp -l SDL2 -l SDL2_image -l SDL2_ttf
     $ ./ZombiesVsPlants
     
 ## Customization
