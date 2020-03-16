@@ -652,11 +652,16 @@ void handle_user_click(Player & player, Icons & icons, Elements & elements, Map 
 		if (!sun_picked && click_is_in_frontyard(map, mouse_x, mouse_y))
 			remove_element_if_clicked_on(map, elements, mouse_x, mouse_y);
 	}
-	else if (player.is_first_click_made == true)
+	else if (player.is_first_click_made == true){
+		if (is_an_icon_chosen(mouse_x, mouse_y)){
+			determine_icon_chosen(icons, mouse_y);
+			player.is_first_click_made = true;
+		}
 		if (click_is_in_frontyard(map, mouse_x, mouse_y)){
 			create_new_plant(player, map, elements, icons, mouse_x, mouse_y);
 			player.is_first_click_made = false;
 		}
+	}
 }
 
 bool is_an_icon_chosen(int mouse_x, int mouse_y){
