@@ -1,4 +1,4 @@
-//In the name of God
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -72,6 +72,7 @@
 #define ELEMENT_WIDTH 65
 #define ELEMENT_HEIGHT 80
 
+#define ERROR_SCREEN "./Image_Assets/bad_input.png"
 #define STARTING_SCREEN_DIRECTORY "./Image_Assets/Starting_Screen.png"
 #define BACKGROUND_DIRECTORY "./Image_Assets/Frontyard.png"
 #define BACKGROUND_DIM_DIRECTORY "./Image_Assets/Frontyard_dim.jpeg"
@@ -851,10 +852,37 @@ void save_wave_dur_str_as_int_vect(Level & level, string wave_dur){
 	}
 }
 
+
+void error_screen(window & win){
+	win.draw_png(ERROR_SCREEN, 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+	win.update_screen();
+	while (true){
+		HANDLE(
+			KEY_PRESS(q, exit(0));
+		);
+	}
+}
+
+
+void check_input(Level & level, window & win){
+	if (level.wave_count < 1){
+		error_screen(win);
+	}
+	for(int i=0; i<level.wave_duration.size(); i++){
+		if(level.wave_duration[i]<1){
+			error_screen(win);
+		}
+	
+	}
+}
+
+
+
 void init_game(window & win, Level & level, Player & player, Map & map){
 	desplay_starting_screen(win);
 	read_savedata(player, level);
 	read_level(level);
+	check_input(level,win);
 	decide_zombie_cnt_for_each_sec(level);
 	map = create_a_collection_of_blocks();
 	player.sun_count = INIT_SUN_COUNT;
@@ -975,4 +1003,6 @@ int main(){
 	}
 	return 0;
 }
+
+
 
